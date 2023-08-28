@@ -1,0 +1,1551 @@
+{
+    "doctype": {
+        "prefix": "doctype",
+        "body": [
+            "<!DOCTYPE>",
+            "$1"
+        ],
+        "description": "HTML文件声明",
+        "scope": "text.html"
+    },
+    "a": {
+        "prefix": "a",
+        "body": "<a href=\"$1\">$2</a>$3",
+        "description": "<a href=\"\"></a>",
+        "scope": "text.html"
+    },
+    "abbr": {
+        "prefix": "abbr",
+        "body": "<abbr title=\"$1\">$2</abbr>$3",
+        "description": "HTML:简称/缩写",
+        "scope": "text.html"
+    },
+    "address": {
+        "prefix": "address",
+        "body": [
+            "<address>",
+            "$1",
+            "</address>"
+        ],
+        "description": "HTML:地址",
+        "scope": "text.html"
+    },
+    "area": {
+        "prefix": "area",
+        "body": "<area shape=\"$1\" coords=\"$2\" href=\"$3\" alt=\"$4\">$5",
+        "description": "HTML:可点击区域 <map>上的",
+        "scope": "text.html"
+    },
+    "article": {
+        "prefix": "article",
+        "body": [
+            "<article>",
+            "\t$1",
+            "</article>"
+        ],
+        "description": "HTML:文章",
+        "scope": "text.html"
+    },
+    "aside": {
+        "prefix": "aside",
+        "body": [
+            "<aside>",
+            "\t$1",
+            "</aside>$2"
+        ],
+        "description": "HTML:侧边栏",
+        "scope": "text.html"
+    },
+    "audio": {
+        "prefix": "audio",
+        "body": [
+            "<audio controls>",
+            "\t$1",
+            "</audio>"
+        ],
+        "description": "HTML:音频",
+        "scope": "text.html"
+    },
+    "b": {
+        "prefix": "b",
+        "body": "<b>$1</b>$2",
+        "description": "HTML:粗体",
+        "scope": "text.html"
+    },
+    "base": {
+        "prefix": "base",
+        "body": "<base href=\"$1\" target=\"$2\">$3",
+        "description": "HTML:定义基准链接",
+        "scope": "text.html"
+    },
+    "bdi": {
+        "prefix": "bdi",
+        "body": "<bdi>$1</bdi>$2",
+        "description": "HTML:隔离文本,切换文本方向",
+        "scope": "text.html"
+    },
+    "bdo": {
+        "prefix": "bdo",
+        "body": [
+            "<bdo dir=\"$1\">",
+            "$2",
+            "</bdo>"
+        ],
+        "description": "HTML:覆盖文本方向",
+        "scope": "text.html"
+    },
+    "big": {
+        "prefix": "big",
+        "body": "<big>$1</big>$2",
+        "description": "HTML:标签已删除",
+        "scope": "text.html"
+    },
+    "blockquote": {
+        "prefix": "blockquote",
+        "body": [
+            "<blockquote cite=\"$2\">",
+            "\t$1",
+            "</blockquote>"
+        ],
+        "description": "HTML:块引用",
+        "scope": "text.html"
+    },
+    "body": {
+        "prefix": "body",
+        "body": [
+            "<body>",
+            "\t$1",
+            "</body>"
+        ],
+        "description": "HTML:<body>",
+        "scope": "text.html"
+    },
+    "br": {
+        "prefix": "br",
+        "body": "<br>",
+        "description": "HTML:换行",
+        "scope": "text.html"
+    },
+    "button": {
+        "prefix": "button",
+        "body": "<button type=\"$1\">$2</button>$3",
+        "description": "HTML:按钮",
+        "scope": "text.html"
+    },
+    "canvas": {
+        "prefix": "canvas",
+        "body": "<canvas id=\"$1\">$2</canvas>$3",
+        "description": "HTML:<canvas>绘图",
+        "scope": "text.html"
+    },
+    "caption": {
+        "prefix": "caption",
+        "body": "<caption>$1</caption>$2",
+        "description": "HTML:表格标题",
+        "scope": "text.html"
+    },
+    "cite": {
+        "prefix": "cite",
+        "body": "<cite>$1</cite>$2",
+        "description": "HTML: 文献引用",
+        "scope": "text.html"
+    },
+    "code": {
+        "prefix": "code",
+        "body": "<code>$1</code>$2",
+        "description": "HTML:代码",
+        "scope": "text.html"
+    },
+    "col": {
+        "prefix": "col",
+        "body": "<col>$2",
+        "description": "HTML:表格列",
+        "scope": "text.html"
+    },
+    "colgroup": {
+        "prefix": "colgroup",
+        "body": [
+            "<colgroup>",
+            "\t$1",
+            "</colgroup>"
+        ],
+        "description": "HTML:表格列组合",
+        "scope": "text.html"
+    },
+    "command": {
+        "prefix": "command",
+        "body": "<command>$1</command>$2",
+        "description": "HTML:标签已删除",
+        "scope": "text.html"
+    },
+    "datalist": {
+        "prefix": "datalist",
+        "body": [
+            "<datalist>",
+            "\t$1",
+            "</datalist>"
+        ],
+        "description": "HTML:input选项列表",
+        "scope": "text.html"
+    },
+    "dd": {
+        "prefix": "dd",
+        "body": "<dd>$1</dd>$2",
+        "description": "HTML:描述，定义列表项目的描述",
+        "scope": "text.html"
+    },
+    "del": {
+        "prefix": "del",
+        "body": "<del>$1</del>$2",
+        "description": "HTML:删除线文本",
+        "scope": "text.html"
+    },
+    "details": {
+        "prefix": "details",
+        "body": [
+            "<details>",
+            "\t$1",
+            "</details>"
+        ],
+        "description": "HTML:折叠标签",
+        "scope": "text.html"
+    },
+    "dialog": {
+        "prefix": "dialog",
+        "body": "<dialog>$1</dialog>$2",
+        "description": "HTML:对话框",
+        "scope": "text.html"
+    },
+    "dfn": {
+        "prefix": "dfn",
+        "body": "<dfn>$1</dfn>$2",
+        "description": "HTML:定义一个项目",
+        "scope": "text.html"
+    },
+    "div": {
+        "prefix": "div",
+        "body": [
+            "<div>",
+            "\t$1",
+            "</div>"
+        ],
+        "description": "HTML:<div>",
+        "scope": "text.html"
+    },
+    "dl": {
+        "prefix": "dl",
+        "body": [
+            "<dl>",
+            "\t$1",
+            "</dl>"
+        ],
+        "description": "HTML:定义定义的列表",
+        "scope": "text.html"
+    },
+    "dt": {
+        "prefix": "dt",
+        "body": "<dt>$1</dt>$2",
+        "description": "HTML:定义列表的项目",
+        "scope": "text.html"
+    },
+    "em": {
+        "prefix": "em",
+        "body": "<em>$1</em>$2",
+        "description": "HTML:斜体",
+        "scope": "text.html"
+    },
+    "embed": {
+        "prefix": "embed",
+        "body": "<embed src=\"$1\">$2",
+        "description": "HTML:嵌入内容",
+        "scope": "text.html"
+    },
+    "fieldset": {
+        "prefix": "fieldset",
+        "body": [
+            "<fieldset>",
+            "\t$1",
+            "</fieldset>"
+        ],
+        "description": "HTML:表单元素分组",
+        "scope": "text.html"
+    },
+    "figcaption": {
+        "prefix": "figcaption",
+        "body": "<figcaption>$1</figcaption>$2",
+        "description": "HTML:图片标题/描述",
+        "scope": "text.html"
+    },
+    "figure": {
+        "prefix": "figure",
+        "body": [
+            "<figure>",
+            "\t$1",
+            "</figure>"
+        ],
+        "description": "HTML:流内容(图像，图标，照片，代码等)",
+        "scope": "text.html"
+    },
+    "footer": {
+        "prefix": "footer",
+        "body": [
+            "<footer>",
+            "\t$1",
+            "</footer>"
+        ],
+        "description": "HTML:脚部",
+        "scope": "text.html"
+    },
+    "form": {
+        "prefix": "form",
+        "body": [
+            "<form>",
+            "\t$1",
+            "</form>"
+        ],
+        "description": "HTML:表单",
+        "scope": "text.html"
+    },
+    "h1": {
+        "prefix": "h1",
+        "body": "<h1>$1</h1>$2",
+        "description": "HTML:标题32px<h1>",
+        "scope": "text.html"
+    },
+    "h2": {
+        "prefix": "h2",
+        "body": "<h2>$1</h2>$2",
+        "description": "HTML:标题24px<h2>",
+        "scope": "text.html"
+    },
+    "h3": {
+        "prefix": "h3",
+        "body": "<h3>$1</h3>$2",
+        "description": "HTML:标题18.72px<h3>",
+        "scope": "text.html"
+    },
+    "h4": {
+        "prefix": "h4",
+        "body": "<h4>$1</h4>$2",
+        "description": "HTML:标题16px<h4>",
+        "scope": "text.html"
+    },
+    "h5": {
+        "prefix": "h5",
+        "body": "<h5>$1</h5>$2",
+        "description": "HTML:标题13.28px<h5>",
+        "scope": "text.html"
+    },
+    "h6": {
+        "prefix": "h6",
+        "body": "<h6>$1</h6>$2",
+        "description": "HTML:标题12px<h6>",
+        "scope": "text.html"
+    },
+    "head": {
+        "prefix": "head",
+        "body": [
+            "<head>",
+            "\t$1",
+            "</head>"
+        ],
+        "description": "HTML:<head>文档头",
+        "scope": "text.html"
+    },
+    "header": {
+        "prefix": "header",
+        "body": [
+            "<header>",
+            "\t$1",
+            "</header>"
+        ],
+        "description": "HTML:页面头部",
+        "scope": "text.html"
+    },
+    "hgroup": {
+        "prefix": "hgroup",
+        "body": [
+            "<hgroup>",
+            "\t$1",
+            "</hgroup>"
+        ],
+        "description": "HTML:标题分组",
+        "scope": "text.html"
+    },
+    "hr": {
+        "prefix": "hr",
+        "body": "<hr>",
+        "description": "HTML:水平线",
+        "scope": "text.html"
+    },
+    "html": {
+        "prefix": "html",
+        "body": [
+            "<html>",
+            "\t$1",
+            "</html>"
+        ],
+        "description": "HTML:<html>",
+        "scope": "text.html"
+    },
+    "html5": {
+        "prefix": "html5",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang=\"$1en\">",
+            "\t<head>",
+            "\t\t<title>$2</title>",
+            "\t\t<meta charset=\"UTF-8\">",
+            "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+            "\t\t<link href=\"$3css/style.css\" rel=\"stylesheet\">",
+            "\t</head>",
+            "\t<body>",
+            "\t$4",
+            "\t</body>",
+            "</html>"
+        ],
+        "description": "HTML:html基础模板",
+        "scope": "text.html"
+    },
+    "i": {
+        "prefix": "i",
+        "body": "<i>$1</i>$2",
+        "description": "HTML:斜体文本",
+        "scope": "text.html"
+    },
+    "iframe": {
+        "prefix": "iframe",
+        "body": "<iframe src=\"$1\">$2</iframe>$3",
+        "description": "HTML:嵌入页面,不建议使用",
+        "scope": "text.html"
+    },
+    "img": {
+        "prefix": "img",
+        "body": "<img src=\"$1\" alt=\"$2\">$3",
+        "description": "HTML:图片",
+        "scope": "text.html"
+    },
+    "input": {
+        "prefix": "input",
+        "body": "<input type=\"$1\" name=\"$2\" value=\"$3\">$4",
+        "description": "HTML:输入框",
+        "scope": "text.html"
+    },
+    "ins": {
+        "prefix": "ins",
+        "body": "<ins>$1</ins>$2",
+        "description": "HTML:已插入的文本",
+        "scope": "text.html"
+    },
+    "keygen": {
+        "prefix": "keygen",
+        "body": "<keygen name=\"$1\">$2",
+        "description": "HTML:标签已删除",
+        "scope": "text.html"
+    },
+    "kbd": {
+        "prefix": "kbd",
+        "body": "<kbd>$1</kbd>$2",
+        "description": "HTML:键盘文本",
+        "scope": "text.html"
+    },
+    "label": {
+        "prefix": "label",
+        "body": "<label for=\"$1\">$2</label>$3",
+        "description": "HTML:表单项目标题",
+        "scope": "text.html"
+    },
+    "legend": {
+        "prefix": "legend",
+        "body": "<legend>$1</legend>$2",
+        "description": "HTML:表单元素分组的标题",
+        "scope": "text.html"
+    },
+    "li": {
+        "prefix": "li",
+        "body": "<li>$1</li>$2",
+        "description": "HTML:<li>, ul/ol的子元素",
+        "scope": "text.html"
+    },
+    "link": {
+        "prefix": "link",
+        "body": "<link rel=\"$1\" type=\"$2\" href=\"$3\">$4",
+        "description": "HTML:链接外部css",
+        "scope": "text.html"
+    },
+    "main": {
+        "prefix": "main",
+        "body": [
+            "<main>",
+            "\t$1",
+            "</main>"
+        ],
+        "description": "HTML:主要内容",
+        "scope": "text.html"
+    },
+    "map": {
+        "prefix": "map",
+        "body": [
+            "<map name=\"$1\">",
+            "\t$2",
+            "</map>"
+        ],
+        "description": "HTML:图片映射",
+        "scope": "text.html"
+    },
+    "mark": {
+        "prefix": "mark",
+        "body": "<mark>$1</mark>$2",
+        "description": "HTML:标记文本",
+        "scope": "text.html"
+    },
+    "menu": {
+        "prefix": "menu",
+        "body": [
+            "<menu>",
+            "\t$1",
+            "</menu>"
+        ],
+        "description": "HTML:菜单",
+        "scope": "text.html"
+    },
+    "menuitem": {
+        "prefix": "menuitem",
+        "body": "<menuitem>$1</menuitem>$2",
+        "description": "HTML:标签已删除",
+        "scope": "text.html"
+    },
+    "meta": {
+        "prefix": "meta",
+        "body": "<meta name=\"$1\" content=\"$2\">$3",
+        "description": "HTML:定义元信息",
+        "scope": "text.html"
+    },
+    "meter": {
+        "prefix": "meter",
+        "body": "<meter value=\"$1\">$2</meter>$3",
+        "description": "HTML:柱状标量测量，非进度条",
+        "scope": "text.html"
+    },
+    "nav": {
+        "prefix": "nav",
+        "body": [
+            "<nav>",
+            "\t$1",
+            "</nav>"
+        ],
+        "description": "HTML:导航",
+        "scope": "text.html"
+    },
+    "noscript": {
+        "prefix": "noscript",
+        "body": [
+            "<noscript>",
+            "$1",
+            "</noscript>"
+        ],
+        "description": "HTML: script未执行时显示",
+        "scope": "text.html"
+    },
+    "object": {
+        "prefix": "object",
+        "body": "<object width=\"$1\" height=\"$2\" data=\"$3\">$4</object>$5",
+        "description": "HTML:嵌入对象",
+        "scope": "text.html"
+    },
+    "ol": {
+        "prefix": "ol",
+        "body": [
+            "<ol>",
+            "\t$1",
+            "</ol>"
+        ],
+        "description": "HTML:有序列表",
+        "scope": "text.html"
+    },
+    "optgroup": {
+        "prefix": "optgroup",
+        "body": [
+            "<optgroup>",
+            "\t$1",
+            "</optgroup>"
+        ],
+        "description": "HTML:下拉列表分组",
+        "scope": "text.html"
+    },
+    "option": {
+        "prefix": "option",
+        "body": "<option value=\"$1\">$2</option>$3",
+        "description": "HTML:下拉列表项目",
+        "scope": "text.html"
+    },
+    "output": {
+        "prefix": "output",
+        "body": "<output name=\"$1\" for=\"$2\">$3</output>$4",
+        "description": "HTML:输出，表单用",
+        "scope": "text.html"
+    },
+    "p": {
+        "prefix": "p",
+        "body": "<p>$1</p>$2",
+        "description": "HTML:段落",
+        "scope": "text.html"
+    },
+    "param": {
+        "prefix": "param",
+        "body": "<param name=\"$1\" value=\"$2\">$3",
+        "description": "HTML:<object>元素",
+        "scope": "text.html"
+    },
+    "pre": {
+        "prefix": "pre",
+        "body": [
+            "<pre>$1</pre>"
+        ],
+        "description": "HTML:代码",
+        "scope": "text.html"
+    },
+    "progress": {
+        "prefix": "progress",
+        "body": "<progress value=\"$1\" max=\"$2\">$3</progress>$4",
+        "description": "HTML:进度条",
+        "scope": "text.html"
+    },
+    "q": {
+        "prefix": "q",
+        "body": "<q>$1</q>$2",
+        "description": "HTML短引用",
+        "scope": "text.html"
+    },
+    "rp": {
+        "prefix": "rp",
+        "body": "<rp>$1</rp>$2",
+        "description": "HTML:<ruby>中注释使用 ",
+        "scope": "text.html"
+    },
+    "rt": {
+        "prefix": "rt",
+        "body": "<rt>$1</rt>$2",
+        "description": "HTML:<ruby>中的解释或发音",
+        "scope": "text.html"
+    },
+    "ruby": {
+        "prefix": "ruby",
+        "body": [
+            "<ruby>",
+            "$1",
+            "</ruby>"
+        ],
+        "description": "HTML:注音，注释等",
+        "scope": "text.html"
+    },
+    "s": {
+        "prefix": "s",
+        "body": "<s>$1</s>$2",
+        "description": "HTML:删除线文本",
+        "scope": "text.html"
+    },
+    "samp": {
+        "prefix": "samp",
+        "body": "<samp>$1</samp>$2",
+        "description": "HTML:样本文本",
+        "scope": "text.html"
+    },
+    "script": {
+        "prefix": "script",
+        "body": [
+            "<script>",
+            "\t$1",
+            "</script>"
+        ],
+        "description": "HTML:<script>",
+        "scope": "text.html"
+    },
+    "scriptsrc": {
+        "prefix": "scriptsrc",
+        "body": [
+            "<script src=\"$1\"></script>"
+        ],
+        "description": "HTML5:<script src>",
+        "scope": "text.html"
+    },
+    "section": {
+        "prefix": "section",
+        "body": [
+            "<section>",
+            "\t$1",
+            "</section>"
+        ],
+        "description": "HTML:区域",
+        "scope": "text.html"
+    },
+    "select": {
+        "prefix": "select",
+        "body": [
+            "<select>",
+            "\t$1",
+            "</select>"
+        ],
+        "description": "HTML:下拉列表",
+        "scope": "text.html"
+    },
+    "small": {
+        "prefix": "small",
+        "body": "<small>$1</small>$2",
+        "description": "HTML:小号文本",
+        "scope": "text.html"
+    },
+    "source": {
+        "prefix": "source",
+        "body": "<source src=\"$1\" type=\"$2\">$3",
+        "description": "HTML:媒体资源路径",
+        "scope": "text.html"
+    },
+    "span": {
+        "prefix": "span",
+        "body": "<span>$1</span>$2",
+        "description": "HTML:行内元素",
+        "scope": "text.html"
+    },
+    "strong": {
+        "prefix": "strong",
+        "body": "<strong>$1</strong>$2",
+        "description": "HTML:加粗",
+        "scope": "text.html"
+    },
+    "style": {
+        "prefix": "style",
+        "body": [
+            "<style>",
+            "$1",
+            "</style>"
+        ],
+        "description": "HTML:样式",
+        "scope": "text.html"
+    },
+    "sub": {
+        "prefix": "sub",
+        "body": "<sub>$1</sub>$2",
+        "description": "HTML:下标文本",
+        "scope": "text.html"
+    },
+    "sup": {
+        "prefix": "sup",
+        "body": "<sup>$1</sup>$2",
+        "description": "HTML上标文本",
+        "scope": "text.html"
+    },
+    "summary": {
+        "prefix": "summary",
+        "body": "<summary>$1</summary>$2",
+        "description": "HTML:折叠文本标题",
+        "scope": "text.html"
+    },
+    "table": {
+        "prefix": "table",
+        "body": [
+            "<table>",
+            "\t$1",
+            "</table>"
+        ],
+        "description": "HTML:表格",
+        "scope": "text.html"
+    },
+    "tbody": {
+        "prefix": "tbody",
+        "body": [
+            "<tbody>",
+            "\t$1",
+            "</tbody>"
+        ],
+        "description": "HTML:表格主体",
+        "scope": "text.html"
+    },
+    "td": {
+        "prefix": "td",
+        "body": "<td>$1</td>$2",
+        "description": "HTML:表格单元格",
+        "scope": "text.html"
+    },
+    "textarea": {
+        "prefix": "textarea",
+        "body": "<textarea rows=\"$1\" cols=\"$2\">$3</textarea>$4",
+        "description": "HTML:输入域",
+        "scope": "text.html"
+    },
+    "tfoot": {
+        "prefix": "tfoot",
+        "body": [
+            "<tfoot>",
+            "\t$1",
+            "</tfoot>"
+        ],
+        "description": "HTML:表格页脚",
+        "scope": "text.html"
+    },
+    "thead": {
+        "prefix": "thead",
+        "body": [
+            "<thead>",
+            "$1",
+            "</thead>"
+        ],
+        "description": "HTML:表格表头",
+        "scope": "text.html"
+    },
+    "th": {
+        "prefix": "th",
+        "body": "<th>$1</th>$2",
+        "description": "HTML:表头单元格",
+        "scope": "text.html"
+    },
+    "time": {
+        "prefix": "time",
+        "body": "<time datetime=\"$1\">$2</time>$3",
+        "description": "HTML:公历时间",
+        "scope": "text.html"
+    },
+    "title": {
+        "prefix": "title",
+        "body": "<title>$1</title>$2",
+        "description": "HTML:文档标题",
+        "scope": "text.html"
+    },
+    "tr": {
+        "prefix": "tr",
+        "body": "<tr>$1</tr>$2",
+        "description": "HTML:表格行",
+        "scope": "text.html"
+    },
+    "track": {
+        "prefix": "track",
+        "body": "<track src=\"$1\" kind=\"$2\" srclang=\"$3\" label=\"$4\">$5",
+        "description": "HTML:媒体外部文本轨道",
+        "scope": "text.html"
+    },
+    "u": {
+        "prefix": "u",
+        "body": "<u>$1</u>$2",
+        "description": "HTML - Used to define underlined text",
+        "scope": "text.html"
+    },
+    "ul": {
+        "prefix": "ul",
+        "body": [
+            "<ul>",
+            "\t$1",
+            "</ul>"
+        ],
+        "description": "HTML:下划线文本",
+        "scope": "text.html"
+    },
+    "var": {
+        "prefix": "var",
+        "body": "<var>$1</var>$2",
+        "description": "HTML:定义变量",
+        "scope": "text.html"
+    },
+    "video": {
+        "prefix": "video",
+        "body": [
+            "<video width=\"$1\" height=\"$2\" controls>",
+            "\t$3",
+            "</video>"
+        ],
+        "description": "HTML:视频",
+        "scope": "text.html"
+    },
+    "import": {
+      "prefix": "imp",
+      "body": "import ${2:moduleName} from '${1:module}';$0",
+      "description": "ES6:import...from'...'"
+    },
+    "importNoModuleName": {
+      "prefix": "imn",
+      "body": "import '${1:module}';$0",
+      "description": "ES6:import '..'"
+    },
+    "importDestructing": {
+      "prefix": "imd",
+      "body": "import { $2 } from '${1:module}';$0",
+      "description": "ES6:import{..}from'..'"
+    },
+    "importEverything": {
+      "prefix": "ime",
+      "body": "import * as ${2:alias} from '${1:module}';$0",
+      "description": "ES6:import * as ·· from'··'"
+    },
+    "importAs": {
+      "prefix": "ima",
+      "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+      "description": "ES6:import{ .. as .. }from'··'"
+    },
+    "require": {
+      "prefix": "rqr",
+      "body": "require('${1:package}');",
+      "description": "ES6:require('包')"
+    },
+    "moduleExports": {
+      "prefix": "mde",
+      "body": "module.exports = {\n\t$0\n};\n",
+      "description": "ES6:module.exports = { };"
+    },
+    "exportNamedFunction": {
+      "prefix": "enf",
+      "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};\n",
+      "description": "ES6:export const ·· = () => {}"
+    },
+    "exportDefaultFunction": {
+      "prefix": "edf",
+      "body": "export default (${1:params}) => {\n\t$0\n};\n",
+      "description": "ES6:export default () => { }"
+    },
+    "exportClass": {
+      "prefix": "ecl",
+      "body": "export default class ${1:className} {\n\t$0\n};\n",
+      "description": "ES6:export default class className { }"
+    },
+    "exportClassExtends": {
+      "prefix": "ece",
+      "body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
+      "description": "ES6:export default class className extends baseclassName {  };"
+    },
+  
+    "constructor": {
+      "prefix": "con",
+      "body": "constructor(${1:params}) {\n\t${0}\n}",
+      "description": "ES6:constructor() {}"
+    },
+    "method": {
+      "prefix": "met",
+      "body": "${1:methodName}(${2:params}) {\n\t${0}\n}",
+      "description": "ES6:functionName(params){}"
+    },
+    "propertyGet": {
+      "prefix": "pge",
+      "body": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+      "description": "Creates a getter property inside a class in ES6 syntax"
+    },
+    "propertyset": {
+      "prefix": "pse",
+      "body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+      "description": "Creates a setter property inside a class in ES6 syntax"
+    },
+  
+    "forEach": {
+      "prefix": "fre",
+      "body": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n});",
+      "description": "ES6:array.forEach(item => { })"
+    },
+    "forOf": {
+      "prefix": "fof",
+      "body": "for (const ${1:item} of ${2:object}) {\n\t${0}\n}",
+      "description": "ES6:for (const item of object) { }"
+    },
+    "forIn": {
+      "prefix": "fin",
+      "body": "for (const ${1:item} in ${2:object}) {\n\t${0}\n}",
+      "description": "ES6:for (const item in object) { }"
+    },
+    "anonymousFunction": {
+      "prefix": "anfn",
+      "body": "(${1:params}) => {\n\t${2}\n}",
+      "description": "Creates an anonymous function in ES6 syntax"
+    },
+    "namedFunction": {
+      "prefix": "nfn",
+      "body": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
+      "description": "Creates a named function in ES6 syntax"
+    },
+    "destructingObject": {
+      "prefix": "dob",
+      "body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+      "description": "Creates and assigns a local variable using object destructing"
+    },
+    "destructingArray": {
+      "prefix": "dar",
+      "body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+      "description": "Creates and assigns a local variable using array destructing"
+    },
+    "setInterval": {
+      "prefix": "sti",
+      "body": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
+      "description": "Executes the given function at specified intervals in ES6 syntax"
+    },
+    "setTimeOut": {
+      "prefix": "sto",
+      "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+      "description": "Executes the given function after the specified delay in ES6 syntax"
+    },
+    "promise": {
+      "prefix": "prom",
+      "body": "return new Promise((resolve, reject) => {\n\t${1}\n});",
+      "description": "Creates and returns a new Promise in the standard ES6 syntax"
+    },
+    "thenCatch": {
+      "prefix": "thenc",
+      "body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+      "description": "Add the .then and .catch methods to handle promises"
+    },
+  
+    "consoleAssert": {
+      "prefix": "cas",
+      "body": "console.assert(${1:expression}, ${2:object});",
+      "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+    },
+    "consoleClear": {
+      "prefix": "ccl",
+      "body": "console.clear();",
+      "description": "Clears the console"
+    },
+    "consoleCount": {
+      "prefix": "cco",
+      "body": "console.count(${1:label});",
+      "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+    },
+    "consoleDir": {
+      "prefix": "cdi",
+      "body": "console.dir(${1:object});",
+      "description": "Prints a JavaScript representation of the specified object"
+    },
+    "consoleError": {
+      "prefix": "cer",
+      "body": "console.error(${1:object});",
+      "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+    },
+    "consoleGroup": {
+      "prefix": "cgr",
+      "body": "console.group(\"${1:label}\");",
+      "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+    },
+    "consoleGroupEnd": {
+      "prefix": "cge",
+      "body": "console.groupEnd();",
+      "description": "Closes out the corresponding console.group()."
+    },
+    "consoleLogy": {
+        "prefix": "logy",
+        "body": "console.log('(yu)',${1:object});",
+        "description": "Displays a message in the console"
+    },
+    "consoleLog": {
+      "prefix": "clg",
+      "body": "console.log(${1:object});",
+      "description": "Displays a message in the console"
+    },
+    "consoleLogObject": {
+      "prefix": "clo",
+      "body": "console.log('${1:object} :', ${1:object});",
+      "description": "Displays an object in the console with its name"
+    },
+    "consoleTrace": {
+      "prefix": "ctr",
+      "body": "console.trace(${1:object});",
+      "description": "Prints a stack trace from the point where the method was called"
+    },
+    "consoleWarn": {
+      "prefix": "cwa",
+      "body": "console.warn(${1:object});",
+      "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+    },
+    "consoleInfo": {
+      "prefix": "cin",
+      "body": "console.info(${1:object});",
+      "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+    },
+    "consoleTable": {
+      "prefix": "clt",
+      "body": "console.table(${1:object});",
+      "description": "Displays tabular data as a table."
+    },
+    
+    // Declarations
+    "var statement": {
+        "prefix": "v",
+        "body": "var ${0}",
+        "description": "var statement"
+    },
+    "var assignment": {
+        "prefix": "v=",
+        "body": "var ${1:name} = ${2:value};",
+        "description": "var assignment"
+    },
+    "let statement": {
+        "prefix": "l",
+        "body": "let ${0}",
+        "description": "let statement"
+    },
+    "let assignment": {
+        "prefix": "l=",
+        "body": "let ${1:name} = ${2:value};",
+        "description": "let assignment"
+    },
+    "destructuring let assignment": {
+        "prefix": "dl=",
+        "body": "let {${1:name}} = ${2:value};",
+        "description": "destructuring let assignment"
+    },
+    "const statement": {
+        "prefix": "co",
+        "body": "const ${0}",
+        "description": "const statement"
+    },
+    "const assignment": {
+        "prefix": "co=",
+        "body": "const ${1:name} = ${2:value};",
+        "description": "const assignment"
+    },
+    "destructuring const assignment": {
+        "prefix": "dco=",
+        "body": "const {${1:name}} = ${2:value};",
+        "description": "destructuring const assignment"
+    },
+    // Flow Control
+    "if statement": {
+        "prefix": "if",
+        "body": "if (${1:condition}) {\n\t${0}\n}",
+        "description": "if statement"
+    },
+    "else statement": {
+        "prefix": "el",
+        "body": "else {\n\t${0}\n}",
+        "description": "else statement"
+    },
+    "if/else statement": {
+        "prefix": "ife",
+        "body": "if (${1:condition}) {\n\t${0}\n} else {\n\t\n}",
+        "description": "if/else statement"
+    },
+    "else if statement": {
+        "prefix": "ei",
+        "body": "else if (${1:condition}) {\n\t${0}\n}",
+        "description": "else if statement"
+    },
+    "ternary operator": {
+        "prefix": "ter",
+        "body": "${1:condition} ? ${2:expression} : ${3:expression};",
+        "description": "ternary operator"
+    },
+    "for loop": {
+        "prefix": "fl",
+        "body": "for (let ${1:i} = 0, ${2:len} = ${3:iterable}.length; ${1:i} < ${2:len}; ${1:i}++) {\n\t${0}\n}",
+        "description": "for loop"
+    },
+    "reverse for loop": {
+        "prefix": "rfl",
+        "body": "for (let ${1:i} = ${2:iterable}.length - 1; ${1:i} >= 0; ${1:i}--) {\n\t${0}\n}",
+        "description": "reverse for loop"
+    },
+    "for in loop": {
+        "prefix": "fi",
+        "body": "for (let ${1:key} in ${2:array}) {\n\tif (${2:array}.hasOwnProperty(${1:key})) {\n\t\t${0}\n\t}\n}",
+        "description": "for in loop"
+    },
+    "for of loop (ES6)": {
+        "prefix": "fo",
+        "body": "for (let ${1:key} of ${2:array}) {\n\t${0}\n}",
+        "description": "for of loop (ES6)"
+    },
+    "while loop": {
+        "prefix": "wl",
+        "body": "while (${1:condition}) {\n\t${0}\n}",
+        "description": "while loop"
+    },
+    "try/catch": {
+        "prefix": "tc",
+        "body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n}",
+        "description": "try/catch"
+    },
+    "try/finally": {
+        "prefix": "tf",
+        "body": "try {\n\t${0}\n} finally {\n\t\n}",
+        "description": "try/finally"
+    },
+    "try/catch/finally": {
+        "prefix": "tcf",
+        "body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n} finally {\n\t\n}",
+        "description": "try/catch/finally"
+    },
+    "switch case": {
+        "prefix": "sw",
+        "body": "switch (${1:expr}) {\n\tcase ${2:value}:\n\t\treturn $0;\n\tdefault:\n\t\treturn;\n}",
+        "description": "switch case"
+    },
+    // Functions
+    "anonymous function": {
+        "prefix": "f",
+        "body": "function (${1:arguments}) {\n\t${0}\n}",
+        "description": "anonymous function"
+    },
+    "named function": {
+        "prefix": "fn",
+        "body": "function ${1:name}(${2:arguments}) {\n\t${0}\n}",
+        "description": "named function"
+    },
+    "immediately-invoked function expression (IIFE)": {
+        "prefix": "iife",
+        "body": "((${1:arguments}) => {\n\t${0}\n})(${2});",
+        "description": "immediately-invoked function expression (IIFE)"
+    },
+    "function apply": {
+        "prefix": "fa",
+        "body": "${1:fn}.apply(${2:this}, ${3:arguments})",
+        "description": "function apply"
+    },
+    "function call": {
+        "prefix": "fc",
+        "body": "${1:fn}.call(${2:this}, ${3:arguments})",
+        "description": "function call"
+    },
+    "function bind": {
+        "prefix": "fb",
+        "body": "${1:fn}.bind(${2:this}, ${3:arguments})",
+        "description": "function bind"
+    },
+    "arrow function (ES6)": {
+        "prefix": "af",
+        "body": "(${1:arguments}) => ${2:statement}",
+        "description": "arrow function (ES6)"
+    },
+    "arrow function with body (ES6)": {
+        "prefix": "afb",
+        "body": "(${1:arguments}) => {\n\t${0}\n}",
+        "description": "arrow function with body (ES6)"
+    },
+    "generator function (ES6)": {
+        "prefix": "gf",
+        "body": "function* (${1:arguments}) {\n\t${0}\n}",
+        "description": "generator function (ES6)"
+    },
+    "named generator function (ES6)": {
+        "prefix": "gfn",
+        "body": "function* ${1:name}(${2:arguments}) {\n\t${0}\n}",
+        "description": "named generator function (ES6)"
+    },
+    // Iterables
+    "sequence of 0..n": {
+        "prefix": "seq",
+        "body": "[...Array(${1:length}).keys()]${0}",
+        "description": "sequence of 0..n"
+    },
+    "forEach loop": {
+        "prefix": "fe",
+        "body": "${1}.forEach((${2:item}) => {\n\t${0}\n});",
+        "description": "forEach loop"
+    },
+    "map": {
+        "prefix": "map",
+        "body": "${1}.map((${2:item}) => {\n\t${0}\n});",
+        "description": "map"
+    },
+    "reduce": {
+        "prefix": "reduce",
+        "body": "${1}.reduce((${2:previous}, ${3:current}) => {\n\t${0}\n}${4:, initial});",
+        "description": "reduce"
+    },
+    "filter": {
+        "prefix": "filter",
+        "body": "${1}.filter(${2:item} => {\n\t${0}\n});",
+        "description": "filter"
+    },
+    "find": {
+        "prefix": "find",
+        "body": "${1}.find(${2:item} => {\n\t${0}\n});",
+        "description": "find"
+    },
+    // Objects and Classes
+    "object literal": {
+        "prefix": "ol",
+        "body": "{\n\tkv${0}\n};",
+        "description": "object literal"
+    },
+    "same-line object literal": {
+        "prefix": "slol",
+        "body": "{ kv${0} };",
+        "description": "same-line object literal"
+    },
+    "key/value pair": {
+        "prefix": "kv",
+        "body": "${1:key}: ${2:value},",
+        "description": "key/value pair"
+    },
+    "class (ES6)": {
+        "prefix": "c",
+        "body": "class ${1:name} {\n\tconstructor(${2:arguments}) {\n\t\t${0}\n\t}\n}",
+        "description": "class (ES6)"
+    },
+    "child class (ES6)": {
+        "prefix": "cex",
+        "body": "class ${1:name} extends ${2:base} {\n\tconstructor(${3:arguments}) {\n\t\tsuper(${3:arguments});\n\t\t${0}\n\t}\n}",
+        "description": "child class (ES6)"
+    },
+    "class constructor (ES6)": {
+        "prefix": "ctor",
+        "body": "constructor(${1:arguments}) {\n\tsuper(${1:arguments});${0}\n}",
+        "description": "class constructor (ES6)"
+    },
+    "method (ES6 syntax)": {
+        "prefix": "m",
+        "body": "${1:method}(${2:arguments}) {\n\t${0}\n}",
+        "description": "method (ES6 syntax)"
+    },
+    "getter (ES6 syntax)": {
+        "prefix": "get",
+        "body": "get ${1:property}() {\n\t${0}\n}",
+        "description": "getter (ES6 syntax)"
+    },
+    "setter (ES6 syntax)": {
+        "prefix": "set",
+        "body": "set ${1:property}(${2:value}) {\n\t${0}\n}",
+        "description": "setter (ES6 syntax)"
+    },
+    "getter and setter (ES6 syntax)": {
+        "prefix": "gs",
+        "body": "get ${1:property}() {\n\t${0}\n}\nset ${1:property}(${2:value}) {\n\t\n}",
+        "description": "getter and setter (ES6 syntax)"
+    },
+    "prototypal constructor": {
+        "prefix": "pctor",
+        "body": "var ${1:Class} = function(${2:arguments}) {\n\t${0}\n};",
+        "description": "prototypal constructor"
+    },
+    "prototype method": {
+        "prefix": "proto",
+        "body": "${1:Class}.prototype.${2:method} = function(${3:arguments}) {\n\t${0}\n};",
+        "description": "prototype method"
+    },
+    "Object.assign": {
+        "prefix": "oa",
+        "body": "Object.assign(${1:dest}, ${2:source})",
+        "description": "Object.assign"
+    },
+    "Object.assign copy (shallow clone)": {
+        "prefix": "oc",
+        "body": "Object.assign({}, ${1:original}, ${2:source})",
+        "description": "Object.assign copy (shallow clone)"
+    },
+    // Returning values
+    "return": {
+        "prefix": "r",
+        "body": "return ${0};",
+        "description": "return"
+    },
+    "return Promise (ES6)": {
+        "prefix": "rp",
+        "body": "return new Promise((resolve, reject) => {\n\t${0}\n});",
+        "description": "return Promise (ES6)"
+    },
+    "return complex value (such as JSX components)": {
+        "prefix": "rc",
+        "body": "return (\n\t${0}\n);",
+        "description": "return complex value (such as JSX components)"
+    },
+    // Types
+    "typeof": {
+        "prefix": "tof",
+        "body": "typeof ${1:source} === '${2:undefined}'",
+        "description": "typeof"
+    },
+    "instanceof": {
+        "prefix": "iof",
+        "body": "${1:source} instanceof ${2:Object}",
+        "description": "instanceof"
+    },
+    // Promises
+    "Promise (ES6)": {
+        "prefix": "pr",
+        "body": "new Promise((resolve, reject) => {\n\t${0}\n})",
+        "description": "Promise (ES6)"
+    },
+    "Promise.then": {
+        "prefix": "then",
+        "body": "${1:promise}.then((${2:value}) => {\n\t${0}\n})",
+        "description": "Promise.then"
+    },
+    "Promise.catch": {
+        "prefix": "catch",
+        "body": "${1:promise}.catch((${2:err}) => {\n\t${0}\n})",
+        "description": "Promise.catch"
+    },
+    // ES6 Modules
+    "export (ES6)": {
+        "prefix": "ex",
+        "body": "export ${1:member};",
+        "description": "export (ES6)"
+    },
+    "export default (ES6)": {
+        "prefix": "exd",
+        "body": "export default ${1:member};",
+        "description": "export default (ES6)"
+    },
+    "import module (ES6)": {
+        "prefix": "im",
+        "body": "import ${1:*} from '${2:module}';",
+        "description": "import module (ES6)"
+    },
+    "import module as (ES6)": {
+        "prefix": "ima",
+        "body": "import ${1:*} as ${2:name} from '${3:module}';",
+        "description": "import module as (ES6)"
+    },
+    // Node.js
+    "Node.js style callback": {
+        "prefix": "cb",
+        "body": "(err, ${1:value}) => {${0}}",
+        "description": "Node.js style callback"
+    },
+    "require": {
+        "prefix": "re",
+        "body": "require('${1:module}');",
+        "description": "require"
+    },
+    "require local": {
+        "prefix": "rel",
+        "body": "require('./${1:module}');",
+        "description": "require local"
+    },
+    "require assignment": {
+        "prefix": "req",
+        "body": "const ${1:module} = require('${1:module}');",
+        "description": "require assignment"
+    },
+    "require assignment local": {
+        "prefix": "reql",
+        "body": "const ${1:module} = require('./${1:module}');",
+        "description": "require assignment local"
+    },
+    "destructuring require assignment": {
+        "prefix": "dreq",
+        "body": "const {${1:module}} = require('${1:module}');",
+        "description": "destructuring require assignment"
+    },
+    "destructuring require assignment local": {
+        "prefix": "dreql",
+        "body": "const {${1:module}} = require('./${1:module}');",
+        "description": "destructuring require assignment local"
+    },
+    "exports.member": {
+        "prefix": "em",
+        "body": "exports.${1:member} = ${2:value};",
+        "description": "exports.member"
+    },
+    "module.exports": {
+        "prefix": "me",
+        "body": "module.exports = ${1:name};",
+        "description": "module.exports"
+    },
+    "module exports object": {
+        "prefix": "meo",
+        "body": "module.exports = {\n\t${1:member}\n};",
+        "description": "module exports object"
+    },
+    "event handler": {
+        "prefix": "on",
+        "body": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n});",
+        "description": "event handler"
+    },
+    // BDD Testing (Mocha, Jasmine, etc.)
+    "describe": {
+        "prefix": "desc",
+        "body": "describe('${1:description}', () => {\n\t${0}\n});",
+        "description": "describe"
+    },
+    "context": {
+        "prefix": "cont",
+        "body": "context('${1:description}', () => {\n\t${0}\n});",
+        "description": "context"
+    },
+    "it": {
+        "prefix": "it",
+        "body": "it('${1:description}', () => {\n\t${0}\n});",
+        "description": "it"
+    },
+    "it synchronous": {
+        "prefix": "its",
+        "body": "it('${1:description}', () => {\n\t${0}\n});",
+        "description": "it synchronous"
+    },
+    "it asynchronous": {
+        "prefix": "ita",
+        "body": "it('${1:description}', (done) => {\n\t${0}\n\tdone();\n});",
+        "description": "it asynchronous"
+    },
+    "before test suite": {
+        "prefix": "bf",
+        "body": "before(() => {\n\t${0}\n});",
+        "description": "before test suite"
+    },
+    "before each test": {
+        "prefix": "bfe",
+        "body": "beforeEach(() => {\n\t${0}\n});",
+        "description": "before each test"
+    },
+    "after test suite": {
+        "prefix": "aft",
+        "body": "after(() => {\n\t${0}\n});",
+        "description": "after test suite"
+    },
+    "after each test": {
+        "prefix": "afe",
+        "body": "afterEach(() => {\n\t${0}\n});",
+        "description": "after each test"
+    },
+    // Console
+    "console.log": {
+        "prefix": "cl",
+        "body": "console.log(${0});",
+        "description": "console.log"
+    },
+    "console.error": {
+        "prefix": "ce",
+        "body": "console.error(${0});",
+        "description": "console.error"
+    },
+    "console.warn": {
+        "prefix": "cw",
+        "body": "console.warn(${0});",
+        "description": "console.warn"
+    },
+    "console.log labeled": {
+        "prefix": "cll",
+        "body": "console.log('${0}', ${0});",
+        "description": "console.log labeled"
+    },
+    "console.error labeled": {
+        "prefix": "cel",
+        "body": "console.error('${0}', ${0});",
+        "description": "console.error labeled"
+    },
+    "console.warn labeled": {
+        "prefix": "cwl",
+        "body": "console.warn('${0}', ${0});",
+        "description": "console.warn labeled"
+    },
+    // Timers
+    "setTimeout": {
+        "prefix": "st",
+        "body": "setTimeout(() => {\n\t${0}\n}, ${1:delay});",
+        "description": "setTimeout"
+    },
+    "setInterval": {
+        "prefix": "si",
+        "body": "setInterval(() => {\n\t${0}\n}, ${1:delay});",
+        "description": "setInterval"
+    },
+    "setImmediate": {
+        "prefix": "sim",
+        "body": "setImmediate(() => {\n\t${0}\n});",
+        "description": "setImmediate"
+    },
+    "process nextTick": {
+        "prefix": "nt",
+        "body": "process.nextTick(() => {\n\t${0}\n});",
+        "description": "process nextTick"
+    },
+    // Miscellaneous
+    "insert 'use strict' statement": {
+        "prefix": "us",
+        "body": "'use strict';",
+        "description": "insert 'use strict' statement"
+    }
+}

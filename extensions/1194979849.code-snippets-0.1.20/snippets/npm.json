@@ -1,0 +1,54 @@
+{
+    "name": {
+        "prefix": "name",
+        "body": [
+            "\"name\":\"$1\","
+        ],
+        "description": "项目名称"
+    },
+    "version": {
+        "prefix": "version",
+        "body": [
+            "\"version\":\"$1\","
+        ],
+        "description": "项目版本"
+    },
+    "author": {
+        "prefix": "author",
+        "body": [
+            "\"author\":\"$1\","
+        ],
+        "description": "项目作者"
+    },
+    "description": {
+        "prefix": "description",
+        "body": [
+            "\"description\":\"$1\","
+        ],
+        "description": "项目简介; 字符串"
+    },
+    "keywords":{
+        "prefix":"keywords",
+        "body":[
+            "\"keywords\":[\"$1\"],"
+        ],
+        "description":"项目关键词"
+    },
+    "repository":{
+        "prefix":"repository",
+        "body":[
+            "\"repository\":{",
+                "\t\"type\":\"git$1\"",
+                "\t\"url\":\"$2\"",
+            "},"
+        ],
+        "description":"项目存储库"
+    },
+    "license": {
+        "prefix": "license",
+        "body": [
+            "\"license\":\"$1\","
+        ],
+        "description": "项目许可证"
+    }
+}

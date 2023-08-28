@@ -1,0 +1,1190 @@
+{
+
+    "vueConfigjs": {
+        "prefix": "vueConfigjs",
+        "body": [
+            "//const path = require('path')",
+            "//const debug = process.env.NODE_ENV !== 'production'",
+            "//const VueConf = require('./src/assets/js/libs/vue_config_class')",
+            "//const vueConf = new VueConf(process.argv)",
+            " ",
+            "",
+
+            "module.exports = {",
+            "\tpublicPath: './', //vueConf.publicPath, // 根域上下文目录",
+            "\toutputDir: 'dist', // 构建输出目录",
+            "\tassetsDir: 'assets', // 静态资源目录 (js, css, img, fonts)",
+            "\tlintOnSave: true, // 是否开启eslint保存检测，有效值：ture | false | 'error'",
+            "\truntimeCompiler: true, // 运行时版本是否需要编译",
+            "\ttranspileDependencies: [], // 默认babel-loader忽略mode_modules，这里可增加例外的依赖包名",
+            "\tproductionSourceMap: false, // 是否在构建生产包时生成 sourceMap 文件，false将提高构建速度",
+            "\tcss: { // 配置高于chainWebpack中关于css loader的配置",
+            "\t\t// modules: true, // 是否开启支持‘foo.module.css’样式",
+            "\t\t// extract: true, // 是否使用css分离插件 ExtractTextPlugin，采用独立样式文件载入，不采用<style>方式内联至html文件中",
+            "\t\tsourceMap: false, // 是否在构建样式地图，false将提高构建速度",
+            "\t\tloaderOptions: { // css预设器配置项",
+            "\t\t\tsass: {",
+            "\t\t\t\tdata: ''//`@import '@/assets/scss/mixin.scss';`",
+            "\t\t\t}",
+            "\t\t}",
+            "\t},",
+            "\tparallel: require('os').cpus().length > 1, // 构建时开启多进程处理babel编译",
+            "\tpluginOptions: { // 第三方插件配置",
+            "\t},",
+            "\tpwa: { // 单页插件相关配置 https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa",
+            "\t},",
+            "\tdevServer: {",
+            "\t\topen: true,",
+            "\t\thost: '0.0.0.0',",
+            "\t\tport: 8080,",
+            "\t\thttps: false,",
+            "\t\thotOnly: false,",
+            "\t\tproxy: null,",
+            "\t\t// proxy: {",
+            "\t\t//     '/api': {",
+            "\t\t//         target: '<url>',",
+            "\t\t//         ws: true,",
+            "\t\t//         changOrigin: true",
+            "\t\t//     }",
+            "\t\t// },",
+            "\t}",
+            "}"
+
+        ],
+        "description": "vueConfigjs配置及相关介绍"
+    },
+    "import": {
+        "prefix": "import",
+        "body": [
+            "import $1 from '$2'"
+        ],
+        "description": "import ... from ..."
+    },
+    "vue": {
+        "prefix": "newVue",
+        "body": [
+            "new Vue({",
+            "\t$1",
+            "})"
+        ],
+        "description": "new Vue()"
+    },
+    "key": {
+        "prefix": "key",
+        "body": [
+            "key () {",
+            "\treturn this.route.fullPath",
+            "}"
+        ],
+        "description": "路由参数变化重新渲染解决方案"
+    },
+    "silent": {
+        "prefix": "VueConfigSilent",
+        "body": [
+            "Vue.config.silent = ${1:true}"
+        ],
+        "description": "取消 Vue 所有的日志与警告"
+    },
+    "optionMergeStrategies": {
+        "prefix": "VueConfigOptionMergeStrategies",
+        "body": [
+            "Vue.config.optionMergeStrategies$1"
+        ],
+        "description": "Vue.config.optionMergeStrategies"
+    },
+    "devtools": {
+        "prefix": "VueConfigDevtools",
+        "body": [
+            "Vue.config.devtools = ${1:true}"
+        ],
+        "description": "是否允许vue-devtools"
+    },
+    "errorHandler": {
+        "prefix": "VueConfigErrorHandler",
+        "body": [
+            "Vue.config.errorHandler = function (err, vm, info) {",
+            "\t${1:// handle error}",
+            "}"
+        ],
+        "description": "捕获错误信息并处理"
+    },
+    "warnHandler": {
+        "prefix": "VueConfigWarnHandler",
+        "body": [
+            "Vue.config.warnHandler = function (msg, vm, trace) {",
+            "\t${1:// handle warn}",
+            "}"
+        ],
+        "description": "捕获警告信息并处理"
+    },
+    "ignoredElements": {
+        "prefix": "VueConfigIgnoredElements",
+        "body": [
+            "Vue.config.ignoredElements = [",
+            "\t'${1}'",
+            "]$0"
+        ],
+        "description": "忽略vue之外的自定义元素"
+    },
+    "keyCodes": {
+        "prefix": "VueConfigKeyCodes",
+        "body": [
+            "Vue.config.keyCodes = {",
+            "\t${1:// camelCase won`t work}",
+            "}"
+        ],
+        "description": "v-on 自定义键位别名"
+    },
+    "performance": {
+        "prefix": "VueConfigPerformance",
+        "body": [
+            "Vue.config.performance = ${1:true}"
+        ],
+        "description": "在浏览器开发工具的性能/时间线面板中启用对组件初始化、编译、渲染和打补丁的性能追踪"
+    },
+    "productionTip": {
+        "prefix": "VueConfigProductionTip",
+        "body": [
+            "Vue.config.productionTip = ${1:false}"
+        ],
+        "description": "阻止 vue 在启动时生成生产提示"
+    },
+    "extend": {
+        "prefix": "vueExtend",
+        "body": [
+            "Vue.extend({",
+            "\ttemplate:${1:template}",
+            "})"
+        ],
+        "description": "基础 Vue 构造器，创建一个“子类”。"
+    },
+    "nextTick": {
+        "prefix": "VueNextTick",
+        "body": [
+            "Vue.nextTick({",
+            "\t$1",
+            "})"
+        ],
+        "description": "修改数据之后立即使用这个方法，获取更新后的 DOM"
+    },
+    "nextTickThen": {
+        "prefix": "VueNextTickThen",
+        "body": [
+            "Vue.nextTick({",
+            "\t$1",
+            "}).then(function($2){",
+            "\t$3",
+            "})"
+        ],
+        "description": "修改数据之后立即使用这个方法，获取更新后的 DOM"
+    },
+    "set": {
+        "prefix": "VueSet",
+        "body": [
+            "Vue.set(${1:target}, ${2:key}, ${3:value})"
+        ],
+        "description": "Vue.set( target, key, value )"
+    },
+    "delete": {
+        "prefix": "VueDelete",
+        "body": [
+            "Vue.delete(${1:target}, ${2:key})"
+        ],
+        "description": "Vue.delete( target, key )"
+    },
+    "directive": {
+        "prefix": "VueDirective",
+        "body": [
+            "Vue.directive(${1:id}${2:, [definition]})"
+        ],
+        "description": "注册或获取全局指令。"
+    },
+    "filter": {
+        "prefix": "VueFilter",
+        "body": [
+            "Vue.filter(${1:id}${2:, [definition]})"
+        ],
+        "description": "注册或获取全局过滤器。"
+    },
+    "component": {
+        "prefix": "VueComponent",
+        "body": [
+            "Vue.component(${1:id}${2:, [definition]})$0"
+        ],
+        "description": "注册或获取全局组件。"
+    },
+    "use": {
+        "prefix": "VueUse",
+        "body": [
+            "Vue.use(${1:plugin})$0"
+        ],
+        "description": "安装 Vue.js 插件"
+    },
+    "mixin": {
+        "prefix": "VueMixin",
+        "body": [
+            "Vue.mixin({${1:mixin}})"
+        ],
+        "description": "全局注册混入"
+    },
+    "compile": {
+        "prefix": "VueCompile",
+        "body": [
+            "Vue.compile(${1:template})"
+        ],
+        "description": "在 render 函数中编译模板字符串。只在独立构建时有效"
+    },
+    "version": {
+        "prefix": "VueVersion",
+        "body": [
+            "Vue.version$0"
+        ],
+        "description": "字符串形式的 Vue 安装版本号"
+    },
+    "data": {
+        "prefix": "data",
+        "body": [
+            "data"
+        ],
+        "description": "just a word"
+    },
+    "dataObj": {
+        "prefix": "data",
+        "body": [
+            "data:{",
+            "\t$1",
+            "},"
+        ],
+        "description": "data对象"
+    },
+    "dataReturn": {
+        "prefix": "data",
+        "body": [
+            "data() {",
+            "\treturn {",
+            "\t$1",
+            "};",
+            "},"
+        ],
+        "description": "组件内data对象"
+    },
+    "props": {
+        "prefix": "props",
+        "body": [
+            "props"
+        ],
+        "description": "just a word"
+    },
+    "propsArr": {
+        "prefix": "props",
+        "body": [
+            "props:[$1]"
+        ],
+        "description": "props数组"
+    },
+    "propsObj": {
+        "prefix": "props",
+        "body": [
+            "props:{",
+            "\t$1",
+            "},"
+        ],
+        "description": "props对象"
+    },
+    "propsData": {
+        "prefix": "propsData",
+        "body": [
+            "propsData"
+        ],
+        "description": "just a word"
+    },
+    "propsDataObj": {
+        "prefix": "propsData",
+        "body": [
+            "propsData:{",
+            "\t$1",
+            "},"
+        ],
+        "description": "propsData对象"
+    },
+    "scopedSlots": {
+        "prefix": "scopedSlots",
+        "body": [
+            "scopedSlots"
+        ],
+        "description": "just a word"
+    },
+    "computed": {
+        "prefix": "computed",
+        "body": [
+            "computed"
+        ],
+        "description": "just a word"
+    },
+    "computedObj": {
+        "prefix": "computed",
+        "body": [
+            "computed:{",
+            "\t$1",
+            "},"
+        ],
+        "description": "computed对象"
+    },
+    "methods": {
+        "prefix": "methods",
+        "body": [
+            "methods"
+        ],
+        "description": "just a word"
+    },
+    "methodsObj": {
+        "prefix": "methods",
+        "body": [
+            "methods:{",
+            "\t$1",
+            "},"
+        ],
+        "description": "methods对象"
+    },
+    "watch": {
+        "prefix": "watch",
+        "body": [
+            "watch"
+        ],
+        "description": "just a word"
+    },
+    "watchObj": {
+        "prefix": "watch",
+        "body": [
+            "watch:{",
+            "\t$1",
+            "}"
+        ],
+        "description": "watch对象"
+    },
+    "el": {
+        "prefix": "el",
+        "body": [
+            "el:\"\""
+        ],
+        "description": "vue实例挂载选择器"
+    },
+    "template": {
+        "prefix": "template",
+        "body": [
+            "template"
+        ],
+        "description": "just a word"
+    },
+    "render": {
+        "prefix": "render",
+        "body": [
+            "render"
+        ],
+        "description": "just a word"
+    },
+    "renderError": {
+        "prefix": "renderError",
+        "body": [
+            "renderError"
+        ],
+        "description": "just a word"
+    },
+    "beforeCreate": {
+        "prefix": "beforeCreate",
+        "body": [
+            "beforeCreate() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "组件实例刚被创建，组件属性计算之前，如data属性等"
+    },
+    "created": {
+        "prefix": "created",
+        "body": [
+            "created() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "组件实例创建完成，属性已绑定，但DOM还未生成，$el属性还不存在"
+    },
+    "beforeMount": {
+        "prefix": "beforeMount",
+        "body": [
+            "beforeMount() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "模板编译/挂载之前"
+    },
+    "mounted": {
+        "prefix": "mounted",
+        "body": [
+            "mounted() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "模板编译/挂载之后"
+    },
+    "beforeUpdate": {
+        "prefix": "beforeUpdate",
+        "body": [
+            "beforeUpdate() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "组件更新之前"
+    },
+    "updated": {
+        "prefix": "updated",
+        "body": [
+            "updated() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "组件更新之后"
+    },
+    "activated": {
+        "prefix": "activated",
+        "body": [
+            "activated() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "for keep-alive，组件被激活时调用"
+    },
+    "deactivated": {
+        "prefix": "deactivated",
+        "body": [
+            "deactivated() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "for keep-alive，组件被移除时调用"
+    },
+    "beforeDestroy": {
+        "prefix": "beforeDestroy",
+        "body": [
+            "beforeDestroy() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "组件销毁前"
+    },
+    "destroyed": {
+        "prefix": "destroyed",
+        "body": [
+            "destroyed() {",
+            "\t$1",
+            "},"
+        ],
+        "description": "组件销毁后"
+    },
+    "errorCaptured": {
+        "prefix": "errorCaptured",
+        "body": [
+            "errorCaptured: (err, vm, info) => {",
+            "\t$1",
+            "},"
+        ],
+        "description": "捕获子孙组件的错误，防止向上传播"
+    },
+    "directives": {
+        "prefix": "directives",
+        "body": [
+            "directives"
+        ],
+        "description": "just a word"
+    },
+    "directivesInit": {
+        "prefix": "VueDirectives",
+        "body": [
+            "// 注册一个全局自定义指令 `v-指令名`",
+            "Vue.directive('指令名', {",
+            "\t// 当被绑定的元素插入到 DOM 中时……",
+            "\tinserted: function (el) {",
+            "\t\t$1",
+            "\t}",
+            "})"
+        ],
+        "description": "vue全局指令"
+    },
+    "directivesTempInit": {
+        "prefix": "VueDirectives",
+        "body": [
+            "directives: {",
+            "\t指令名: {",
+            "\t\t// 指令的定义",
+            "\t\tinserted: function (el) {",
+            "\t\t\t$1",
+            "\t\t}",
+            "\t}",
+            "},"
+        ],
+        "description": "vue局部指令"
+    },
+    "filters": {
+        "prefix": "filters",
+        "body": [
+            "filters"
+        ],
+        "description": "just a word"
+    },
+    "filtersInit": {
+        "prefix": "filters",
+        "body": [
+            "Vue.filter('{$1:'过滤器'}', function (value) {",
+            "\t$2",
+            "})"
+        ],
+        "description": "全局过滤器"
+    },
+    "filtersTempInit": {
+        "prefix": "filters",
+        "body": [
+            "filters: {",
+
+            "},"
+        ],
+        "description": "局部过滤器"
+    },
+    "componentWord": {
+        "prefix": "componentWord",
+        "body": [
+            "component"
+        ],
+        "description": "just a word"
+    },
+    "components": {
+        "prefix": "components",
+        "body": [
+            "components"
+        ],
+        "description": "just a word"
+    },
+    "componentsObj": {
+        "prefix": "componentsObj",
+        "body": [
+            "components:{",
+            "\t$1",
+            "}"
+        ],
+        "description": "components对象"
+    },
+    "componentsLazyLoad": {
+        "prefix": "componentsLazyLoad",
+        "body": [
+            "component: () => import(\" $1 \")"
+        ],
+        "description": "vue路由的lazy"
+    },
+    "parent": {
+        "prefix": "parent",
+        "body": [
+            "parent"
+        ],
+        "description": "just a word"
+    },
+    "mixins": {
+        "prefix": "mixins",
+        "body": [
+            "mixins"
+        ],
+        "description": "just a word"
+    },
+    "extends": {
+        "prefix": "extends",
+        "body": [
+            "extends"
+        ],
+        "description": "just a word"
+    },
+    "provide": {
+        "prefix": "provide",
+        "body": [
+            "provide"
+        ],
+        "description": "just a word"
+    },
+    "inject": {
+        "prefix": "inject",
+        "body": [
+            "inject"
+        ],
+        "description": "just a word"
+    },
+    "name": {
+        "prefix": "name",
+        "body": [
+            "name"
+        ],
+        "description": "just a word"
+    },
+    "name2": {
+        "prefix": "name",
+        "body": [
+            "name: \"\""
+        ],
+        "description": "name:\"\""
+    },
+    "delimiters": {
+        "prefix": "delimiters",
+        "body": [
+            "delimiters"
+        ],
+        "description": "just a word"
+    },
+    "delimiters2": {
+        "prefix": "delimiters",
+        "body": [
+            "delimiters: ['${', '}']"
+        ],
+        "description": "改变插值符号为${ }"
+    },
+    "functional": {
+        "prefix": "functional",
+        "body": [
+            "functional"
+        ],
+        "description": "just a word"
+    },
+    "functionalTrue": {
+        "prefix": "functional",
+        "body": [
+            "functional: true,"
+        ],
+        "description": "使组件无状态"
+    },
+
+    "model": {
+        "prefix": "model",
+        "body": [
+            "model"
+        ],
+        "description": "just a word"
+    },
+    "inheritAttrs": {
+        "prefix": "inheritAttrs",
+        "body": [
+            "inheritAttrs"
+        ],
+        "description": "just a word"
+    },
+    "comments": {
+        "prefix": "comments",
+        "body": [
+            "comments"
+        ],
+        "description": "just a word"
+    },
+    "commentsTrue": {
+        "prefix": "comments",
+        "body": [
+            "comments: true,"
+        ],
+        "description": "保留注释"
+    },
+    "vm.$data": {
+        "prefix": "vmData",
+        "body": [
+            "${1|this,vm|}.\\$data$2"
+        ],
+        "description": "访问data对象"
+    },
+    "vm.$props": {
+        "prefix": "vmProps",
+        "body": [
+            "${1|this,vm|}.\\$props$2"
+        ],
+        "description": "访问Props对象"
+    },
+    "vm.$el": {
+        "prefix": "vmEl",
+        "body": [
+            "${1|this,vm|}.\\$el$2"
+        ],
+        "description": "Vue 实例的根 DOM 。"
+    },
+    "vm.$options": {
+        "prefix": "vmOptions",
+        "body": [
+            "${1|this,vm|}.\\$options$2"
+        ],
+        "description": "Type: Object. Read only."
+    },
+    "vm.$parent": {
+        "prefix": "vmParent",
+        "body": [
+            "${1|this,vm|}.\\$parent$2"
+        ],
+        "description": "访问父实例/组件"
+    },
+    "vm.$root": {
+        "prefix": "vmRoot",
+        "body": [
+            "${1|this,vm|}.\\$root$2"
+        ],
+        "description": "访问vue根实例"
+    },
+    "vm.$children": {
+        "prefix": "vmChildren",
+        "body": [
+            "${1|this,vm|}.\\$children$2"
+        ],
+        "description": "访问当前实例的直接子组件"
+    },
+    "vm.$slots": {
+        "prefix": "vmSlots",
+        "body": [
+            "${1|this,vm|}.\\$slots$2"
+        ],
+        "description": "Type: Object. Read only."
+    },
+    "vm.$scopedSlots": {
+        "prefix": "vmScopedSlots",
+        "body": [
+            "${1|this,vm|}.\\$scopedSlots.default({",
+            "\t$2",
+            "})"
+        ],
+        "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only."
+    },
+    "vm.$refs": {
+        "prefix": "vmRefs",
+        "body": [
+            "${1|this,vm|}.\\$refs$2"
+        ],
+        "description": "获取注册过的dom节点"
+    },
+    "vm.$isServer": {
+        "prefix": "vmIsServer",
+        "body": [
+            "${1|this,vm|}.\\$isServer$2"
+        ],
+        "description": "当前实例是否运行于服务器"
+    },
+    "vm.$attrs": {
+        "prefix": "vmAttrs",
+        "body": [
+            "${1|this,vm|}.\\$attrs$2"
+        ],
+        "description": "Type: { [key: string]: string }. Read only."
+    },
+    "vm.$listeners": {
+        "prefix": "vmListeners",
+        "body": [
+            "${1|this,vm|}.\\$listeners$2"
+        ],
+        "description": "Type: { [key: string]: Function | Array<Function> }. Read only."
+    },
+    "vm.$watch": {
+        "prefix": "vmWatch",
+        "body": [
+            "${1|this,vm|}.\\$watch(${2:expOrFn}, ${3:callback})"
+        ],
+        "description": "vm.$watch( expOrFn, callback, [options] )\n Arguments:\n {string | Function} expOrFn\n {Function | Object} callback\n {Object} [options]\n {boolean} [options.deep]\n\t {boolean} [options.immediate]"
+    },
+    "vm.$set": {
+        "prefix": "vmSet",
+        "body": [
+            "${1|this,vm|}.\\$set(${2:target}, ${3:key}, ${4:value})"
+        ],
+        "description": "vm.$set( target, key, value ). This is the alias of the global Vue.set."
+    },
+    "vm.$delete": {
+        "prefix": "vmDelete",
+        "body": [
+            "${1|this,vm|}.\\$delete(${2:target}, ${3:key}). This is the alias of the global Vue.delete."
+        ],
+        "description": "vm.$delete( target, key )"
+    },
+    "vm.$on": {
+        "prefix": "vmOn",
+        "body": [
+            "${1|this,vm|}.\\$on('${2:event}', ${3:callback})$4"
+        ],
+        "description": "vm.$on( event, callback )"
+    },
+    "vm.$once": {
+        "prefix": "vmOnce",
+        "body": [
+            "${1|this,vm|}.\\$once('${2:event}', ${3:callback})$4"
+        ],
+        "description": "vm.$once( event, callback )"
+    },
+    "vm.$off": {
+        "prefix": "vmOff",
+        "body": [
+            "${1|this,vm|}.\\$off('${2:event}', ${3:callback})$4"
+        ],
+        "description": "vm.$off( [event, callback] )"
+    },
+    "vm.$emit": {
+        "prefix": "vmEmit",
+        "body": [
+            "${1|this,vm|}.\\$emit('${2:event}'${3:, […args]})$4"
+        ],
+        "description": "vm.$emit( event, […args] )"
+    },
+    "vm.$mount": {
+        "prefix": "vmMount",
+        "body": [
+            "${1|this,vm|}.\\$mount('$2')"
+        ],
+        "description": "vm.$mount( [elementOrSelector] )"
+    },
+    "vm.$forceUpdate": {
+        "prefix": "vmForceUpdate",
+        "body": [
+            "${1|this,vm|}.\\$forceUpdate()"
+        ],
+        "description": "vm.$forceUpdate()"
+    },
+    "vm.$nextTick": {
+        "prefix": "vmNextTick",
+        "body": [
+            "${1|this,vm|}.\\$nextTick(${2:callback})"
+        ],
+        "description": "vm.$nextTick( callback )"
+    },
+    "vm.$destroy": {
+        "prefix": "vmDestroy",
+        "body": [
+            "${1|this,vm|}.\\$destroy()$2"
+        ],
+        "description": "vm.$destroy()"
+    },
+    "renderer": {
+        "prefix": "renderer",
+        "body": [
+            "const ${1:renderer} = require('vue-server-renderer').createRenderer()$0"
+        ],
+        "description": "require('vue-server-renderer').createRenderer()"
+    },
+    "createRenderer": {
+        "prefix": "createRenderer",
+        "body": [
+            "createRenderer({",
+            "\t$1",
+            "})"
+        ],
+        "description": "createRenderer({ })"
+    },
+    "renderToString": {
+        "prefix": "renderToString",
+        "body": [
+            "renderToString"
+        ],
+        "description": "just a word"
+    },
+    "renderToStream": {
+        "prefix": "renderToStream",
+        "body": [
+            "renderToStream"
+        ],
+        "description": "just a word"
+    },
+    "createBundleRenderer": {
+        "prefix": "createBundleRenderer",
+        "body": [
+            "createBundleRenderer"
+        ],
+        "description": "just a word"
+    },
+    "bundleRenderer.renderToString": {
+        "prefix": "bundleRenderer.renderToString",
+        "body": [
+            "bundleRenderer.renderToString"
+        ],
+        "description": "just a word"
+    },
+    "bundleRenderer.renderToStream": {
+        "prefix": "bundleRenderer.renderToStream",
+        "body": [
+            "bundleRenderer.renderToStream"
+        ],
+        "description": "just a word"
+    },
+    "preventDefault": {
+        "prefix": "preventDefault",
+        "body": [
+            "preventDefault();",
+            "$1"
+        ],
+        "description": "preventDefault()"
+    },
+    "stopPropagation": {
+        "prefix": "stopPropagation",
+        "body": [
+            "stopPropagation();",
+            "$1"
+        ],
+        "description": "stopPropagation()"
+    },
+
+    "newVueRouter": {
+        "prefix": "newVueRouter",
+        "body": [
+            "const ${1:router} = new VueRouter({",
+            "\t$2",
+            "})$0"
+        ],
+        "description": "const router = newVueRouter({ })"
+    },
+    "routerBeforeEach": {
+        "prefix": "routerBeforeEach",
+        "body": [
+            "${1:router}.beforeEach((to, from, next) => {",
+            "\t${2:// to and from are both route objects}",
+            "})$0"
+        ],
+        "description": "router.beforeEach"
+    },
+    "routerReplace": {
+        "prefix": "routerReplace",
+        "body": [
+            "${1:router}.replace($2)$0"
+        ],
+        "description": "router.replace()"
+    },
+    "routerGo": {
+        "prefix": "routerGo",
+        "body": [
+            "${1:router}.go($2)$0"
+        ],
+        "description": "router.go()"
+    },
+    "routerPush": {
+        "prefix": "routerPush",
+        "body": [
+            "${1:router}.push($2)$0"
+        ],
+        "description": "router.push()"
+    },
+    "routes": {
+        "prefix": "routes",
+        "body": [
+            "routes: [$1]$0"
+        ],
+        "description": "routes: []"
+    },
+    "beforeEnter": {
+        "prefix": "beforeEnter",
+        "body": [
+            "beforeEnter: (to, from, next) => {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeEnter: (to, from, next) => { }"
+    },
+    "beforeRouteEnter": {
+        "prefix": "beforeRouteEnter",
+        "body": [
+            "beforeRouteEnter (to, from, next) {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeRouteEnter (to, from, next) { }"
+    },
+    "beforeRouteLeave": {
+        "prefix": "beforeRouteLeave",
+        "body": [
+            "beforeRouteLeave (to, from, next) {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeRouteLeave (to, from, next) { }"
+    },
+    "scrollBehavior": {
+        "prefix": "scrollBehavior",
+        "body": [
+            "scrollBehavior (to, from, savedPosition) {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "scrollBehavior (to, from, savedPosition) { }"
+    },
+    "path": {
+        "prefix": "path",
+        "body": [
+            "path"
+        ],
+        "description": "just a word"
+    },
+    "alias": {
+        "prefix": "alias",
+        "body": [
+            "alias"
+        ],
+        "description": "just a word"
+    },
+    "mode": {
+        "prefix": "mode",
+        "body": [
+            "mode"
+        ],
+        "description": "just a word"
+    },
+    "children": {
+        "prefix": "children",
+        "body": [
+            "children"
+        ],
+        "description": "just a word"
+    },
+    "meta": {
+        "prefix": "meta",
+        "body": [
+            "meta"
+        ],
+        "description": "just a word"
+    },
+    "newVuexStore": {
+        "prefix": "newVuexStore",
+        "body": [
+            "const ${1:store} = new Vuex.Store({",
+            "\t${2:// ...}",
+            "})"
+        ],
+        "description": "const store = new Vuex.Store({ })"
+    },
+    "state": {
+        "prefix": "state",
+        "body": [
+            "state"
+        ],
+        "description": "just a word"
+    },
+    "getters": {
+        "prefix": "getters",
+        "body": [
+            "getters"
+        ],
+        "description": "just a word"
+    },
+    "mutations": {
+        "prefix": "mutations",
+        "body": [
+            "mutations"
+        ],
+        "description": "just a word"
+    },
+    "actions": {
+        "prefix": "actions",
+        "body": [
+            "actions"
+        ],
+        "description": "just a word"
+    },
+    "modules": {
+        "prefix": "modules",
+        "body": [
+            "modules"
+        ],
+        "description": "just a word"
+    },
+    "plugins": {
+        "prefix": "plugins",
+        "body": [
+            "plugins"
+        ],
+        "description": "just a word"
+    },
+    "commit": {
+        "prefix": "commit",
+        "body": [
+            "commit"
+        ],
+        "description": "just a word"
+    },
+    "dispatch": {
+        "prefix": "dispatch",
+        "body": [
+            "dispatch"
+        ],
+        "description": "just a word"
+    },
+    "replaceState": {
+        "prefix": "replaceState",
+        "body": [
+            "replaceState"
+        ],
+        "description": "just a word"
+    },
+    "subscribe": {
+        "prefix": "subscribe",
+        "body": [
+            "subscribe"
+        ],
+        "description": "just a word"
+    },
+    "registerModule": {
+        "prefix": "registerModule",
+        "body": [
+            "registerModule"
+        ],
+        "description": "just a word"
+    },
+    "unregisterModule": {
+        "prefix": "unregisterModule",
+        "body": [
+            "unregisterModule"
+        ],
+        "description": "just a word"
+    },
+    "hotUpdate": {
+        "prefix": "hotUpdate",
+        "body": [
+            "hotUpdate"
+        ],
+        "description": "just a word"
+    },
+    "mapState": {
+        "prefix": "mapState",
+        "body": [
+            "mapState"
+        ],
+        "description": "just a word"
+    },
+    "mapGetters": {
+        "prefix": "mapGetters",
+        "body": [
+            "mapGetters"
+        ],
+        "description": "just a word"
+    },
+    "mapActions": {
+        "prefix": "mapActions",
+        "body": [
+            "mapActions"
+        ],
+        "description": "just a word"
+    },
+    "mapMutations": {
+        "prefix": "mapMutations",
+        "body": [
+            "mapMutations"
+        ],
+        "description": "just a word"
+    },
+    // UI 安装 
+    "ElementUIInstall": {
+        "prefix": "ElementUIInstall",
+        "body": [
+            "import ElementUI from 'element-ui';",
+            "import 'element-ui/lib/theme-chalk/index.css';",
+            "Vue.use(ElementUI);"
+        ],
+        "description": "Vue-cli: element-ui 全量 引入安装 "
+    },
+    "iviewInstall": {
+        "prefix": "iviewInstall",
+        "body": [
+            "import iView from 'iview';",
+            "import 'iview/dist/styles/iview.css';",
+            "Vue.use(iView);"
+        ],
+        "description": "Vue-cli: iView 全量 引入安装"
+    }
+    
+}

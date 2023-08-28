@@ -1,0 +1,198 @@
+{
+    "v-text": {
+        "prefix": "vText",
+        "body": [
+            "v-text=\"${1:msg}\""
+        ],
+        "description": "v-text"
+    },
+    "v-html": {
+        "prefix": "vHtml",
+        "body": [
+            "v-html=\"${1:html}\""
+        ],
+        "description": "v-html"
+    },
+    "v-if": {
+        "prefix": "vIf",
+        "body": [
+            "v-if=\"${1:condition}\""
+        ],
+        "description": "v-if"
+    },
+    "v-show": {
+        "prefix": "vShow",
+        "body": [
+            "v-show=\"${1:condition}\""
+        ],
+        "description": "v-show 是否显示"
+    },
+    "v-else": {
+        "prefix": "vElse",
+        "body": [
+            "v-else"
+        ],
+        "description": ""
+    },
+    "v-else-if": {
+        "prefix": "vElseIf",
+        "body": [
+            "v-else-if=\"${1:condition}\""
+        ],
+        "description": "Expects: any. previous sibling element must have v-if or v-else-if."
+    },
+    "v-for-without-key": {
+        "prefix": "vForWithoutKey",
+        "body": [
+            "v-for=\"${1:item} in ${2:items}\""
+        ],
+        "description": "无key的v-for"
+    },
+    "v-for": {
+        "prefix": "vFor",
+        "body": [
+            "v-for=\"${1:item} in ${2:items}\" :key=\"${3:item.id}\""
+        ],
+        "description": "有key的v-for"
+    },
+    "v-on": {
+        "prefix": "vOn",
+        "body": [
+            "v-on:${1:event}=\"${2:handle}\""
+        ],
+        "description": "绑定事件"
+    },
+    "v-bind": {
+        "prefix": "vBind",
+        "body": [
+            "v-bind$1=\"${2}\""
+        ],
+        "description": "绑定属性"
+    },
+    "v-model": {
+        "prefix": "vModel",
+        "body": [
+            "v-model=\"${1:something}\""
+        ],
+        "description": "双向绑定 表单控件常用"
+    },
+    "v-pre": {
+        "prefix": "vPre",
+        "body": [
+            "v-pre"
+        ],
+        "description": "不编译"
+    },
+    "v-cloak": {
+        "prefix": "vCloak",
+        "body": [
+            "v-cloak"
+        ],
+        "description": "编译结束前不显示"
+    },
+    "v-once": {
+        "prefix": "vOnce",
+        "body": [
+            "v-once"
+        ],
+        "description": "只渲染一次"
+    },
+    "key": {
+        "prefix": "key",
+        "body": [
+            ":key=\"${1:key}\""
+        ],
+        "description": "v-for的key"
+    },
+    "ref": {
+        "prefix": "ref",
+        "body": [
+            "ref=\"${1:reference}\"$0"
+        ],
+        "description": "vue的元素选择器，需预先定义"
+    },
+    "slotA": {
+        "prefix": "slotA",
+        "body": [
+            "slot=\"$1\"$0"
+        ],
+        "description": "slot=''. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+    },
+    "slotE": {
+        "prefix": "slotE",
+        "body": [
+            "slot"
+        ],
+        "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+    },
+    "component": {
+        "prefix": "component",
+        "body": [
+            "component(:is=\"${1:componentId}\") $0"
+        ],
+        "description": "component element"
+    },
+    "keep-alive": {
+        "prefix": "keepAlive",
+        "body": [
+            "keep-alive$0"
+        ],
+        "description": "保留组件状态"
+    },
+    "transition": {
+        "prefix": "transition",
+        "body": [
+            "transition$0"
+        ],
+        "description": "单个元素/组件的过渡效果"
+    },
+    "transition-group": {
+        "prefix": "transitionGroup",
+        "body": [
+            "transition-group$0"
+        ],
+        "description": "多个元素/组件的过渡效果"
+    },
+    "routerLink": {
+        "prefix": "routerLink",
+        "body": [
+            "router-link $0"
+        ],
+        "description": "<router-link></router-link>"
+    },
+    "routerLinkTo": {
+        "prefix": "routerLinkTo",
+        "body": [
+            "router-link (to=\"$1\") $0"
+        ],
+        "description": "<router-link to=''></router-link>"
+    },
+    "to": {
+        "prefix": "to",
+        "body": [
+            "to=\"$1\"$0"
+        ],
+        "description": "to=''"
+    },
+    "tag": {
+        "prefix": "tag",
+        "body": [
+            "tag=\"$1\"$0"
+        ],
+        "description": "tag=''"
+    },
+    "routerView": {
+        "prefix": "routerView",
+        "body": [
+            "router-view $0"
+        ],
+        "description": "<router-view></router-view>"
+    },
+    "routerViewWithKey": {
+        "prefix": "routerView",
+        "body": [
+            "<router-view :key=\"key\">$1</router-view>$0"
+        ],
+        "description": "路由参数变化重新渲染解决方案"
+    }
+}

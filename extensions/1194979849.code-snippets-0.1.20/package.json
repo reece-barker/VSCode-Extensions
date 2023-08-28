@@ -1,0 +1,143 @@
+{
+	"name": "code-snippets",
+	"displayName": "CodeSnippets",
+	"author": "余生",
+	"publisher": "1194979849",
+	"icon": "img/logo.png",
+	"description": "html css javascript vue snippet",
+	"license": "MIT",
+	"version": "0.1.20",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"keywords": [
+		"javascript",
+		"snippet",
+		"vue",
+		"iview",
+		"element"
+	],
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"repository": {
+		"type": "gitee",
+		"url": "https://gitee.com/yu_sheng/code-snippets"
+	},
+	"bugs": {
+		"url": "https://gitee.com/yu_sheng/code-snippets/issues",
+		"email": "1194979849@qq.com"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "vue",
+				"aliases": [
+					"Vue",
+					"vue"
+				],
+				"extensions": [
+					".vue"
+				],
+				"configuration": "./syntaxes/vue.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vue",
+				"scopeName": "text.html.vue",
+				"path": "./syntaxes/vue.tmLanguage"
+			}
+		],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "less",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/pug.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "json",
+				"path": "./snippets/npm.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "396fdbdd-34ce-4812-a30f-25541155d8cd",
+		"publisherId": "2a541e81-7696-4799-a2b4-92f6e31c795b",
+		"publisherDisplayName": "余生",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1667903687312,
+		"preRelease": false
+	}
+}

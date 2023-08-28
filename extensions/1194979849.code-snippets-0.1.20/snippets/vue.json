@@ -1,0 +1,277 @@
+{
+    "v-template init": {
+        "prefix": "Vuetemplate",
+        "body": [
+            "<template>",
+            "<div class=\"$1\">",
+            "</div>",
+            "</template>",
+            "\t",
+            "<script>",
+            "export default {",
+            "\tname: '',",
+            "\tdata () {",
+            "\t\treturn {",
+            "\t\t}",
+            "\t}",
+            "}",
+            "</script>",
+            "\t",
+            "<style lang=\"\" scoped>",
+            "</style>"
+        ],
+        "description": ".vue基础模板"
+    },
+    "templateLang": {
+        "prefix": "templateLang",
+        "body": [
+            "<template lang=\"$1\">",
+            "\t$0",
+            "</template>"
+        ],
+        "description": ".vue template 模板"
+    },
+    "script": {
+        "prefix": "script",
+        "body": [
+            "<script>",
+            "export default {",
+            "\tname: '',",
+            "\tdata () {",
+            "\t\treturn {",
+            "\t\t}",
+            "\t}",
+            "}",
+            "</script>"
+        ],
+        "description": ".vue script 模板"
+    },
+    "styleLang": {
+        "prefix": "styleLang",
+        "body": [
+            "<style lang=\"$1\">",
+            "\t$0",
+            "</style>"
+        ],
+        "description": ".vue style with lang 模板"
+    },
+    // Element UI
+    "Notice: Message": {
+        "prefix": "elme",
+        "body": [
+            "this.\\$message({",
+            "\tmessage: '$1',",
+            "\ttype: '${2|info,success,warning,error|}',",
+            "\tshowClose: ${3:true},",
+            "});",
+            "${4}"
+        ],
+        "description": "Element UI $message"
+    },
+    "Notice: Messagebox": {
+        "prefix": "elmebox",
+        "body": [
+            "this.\\$msgbox({",
+            "\ttitle: '$1',",
+            "\tmessage: '${2}',",
+            "\tshowCancelButton: true,",
+            "\tconfirmButtonText: '${3:确定}',",
+            "\tcancelButtonText: '${4:取消}',",
+            "\tbeforeClose: (action, instance, done) => {",
+            "\t\t${5}",
+            "\t}).then(action => {",
+            "\t\t${6}",
+            "\t});",
+            "});",
+            "${7}"
+        ],
+        "description": "Element UI $msgbox"
+    },
+    "Notice: Messagebox Alert": {
+        "prefix": "elmeal",
+        "body": [
+            "this.$alert('${1:内容}', '${2:标题}', {",
+            "\tconfirmButtonText: '${3:确定}',",
+            "\tcallback: action => {",
+            "\t\t${4}",
+            "\t}",
+            "});",
+            "${5}"
+        ],
+        "description": "Element UI $alert"
+    },
+    "Notice: Messagebox Confirm": {
+        "prefix": "elmecon",
+        "body": [
+            "this.$confirm('${1:内容}', '${2:标题}', {",
+            "\tconfirmButtonText: '${3:确定}',",
+            "\tcancelButtonText: '${4:取消}',",
+            "\ttype: '${5:|success,info,warning,erro|}',",
+            "\tcallback: action => {",
+            "\t\t${6}",
+            "\t}",
+            "});",
+            "${7}"
+        ],
+        "description": "Element UI $confirm"
+    },
+
+    "Notice: Messagebox Prompt": {
+        "prefix": "elmepro",
+        "body": [
+            "this.$prompt('${1:内容}', '${2:标题}', {",
+            "\tconfirmButtonText: '${3:确定}',",
+            "\tcancelButtonText: '${4:取消}',",
+            "\tinputPattern: '${5}',",
+            "\tinputErrorMessage: '${6}',",
+            "\tcallback: action => {",
+            "\t\t${7}",
+            "\t}",
+            "});",
+            "${8}"
+        ],
+        "description": "Element UI $prompt"
+    },
+
+    "Notice: Notification": {
+        "prefix": "elnoti",
+        "body": [
+            "this.$notify({",
+            "\ttitle: '${1}',",
+            "\tmessage: '${2}',",
+            "\ttype: '${3:|info,success,warning,error|}',",
+            "\tduration: '${4:|4500, 0|}',",
+            "\tposition: '${5:|top-right,top-left,bottom-right,bottom-left|}'",
+            "});",
+            "${6}"
+        ],
+        "description": "Element UI $notify"
+    },
+    // iview
+
+    "vue template init": {
+        "prefix": "vue-template",
+        "body": [
+            "<template>",
+            "\t$0",
+            "</template>",
+            "",
+            "<script>",
+            "\texport default {",
+            "\t\tname: '$0',",
+            "\t\tdata() {",
+            "\t\t\treturn {",
+            "\t\t\t\t$0",
+            "\t\t\t}",
+            "\t\t}",
+            "\t}",
+            "</script>",
+            "",
+            "<style lang=\"$1\" scoped>",
+            "\t$0",
+            "</style>"
+        ],
+        "description": "vue component templates"
+    },
+    "iview template init": {
+        "prefix": "iview-template",
+        "body": [
+            "<style scoped>",
+
+            ".layout{",
+            "\tborder: 1px solid #d7dde4;",
+            "\tbackground: #f5f7f9;",
+            "}",
+            ".layout-logo{",
+            "\twidth: 100px;",
+            "\theight: 30px;",
+            "\tbackground: #5b6270;",
+            "\tborder-radius: 3px;",
+            "\tfloat: left;",
+            "\tposition: relative;",
+            "\ttop: 15px;",
+            "\tleft: 20px;",
+            "}",
+            ".layout-nav{",
+            "\twidth: 420px;",
+            "\tmargin: 0 auto;",
+            "}",
+            ".layout-assistant{",
+            "\twidth: 300px;",
+            "\tmargin: 0 auto;",
+            "\theight: inherit;",
+            "}",
+            ".layout-breadcrumb{",
+            "\tpadding: 10px 15px 0;",
+            "}",
+            ".layout-content{",
+            "\tmin-height: 200px;",
+            "\tmargin: 15px;",
+            "\toverflow: hidden;",
+            "\tbackground: #fff;",
+            "\tborder-radius: 4px;",
+            "}",
+            ".layout-content-main{",
+            "\tpadding: 10px;",
+            "}",
+            ".layout-copy{",
+            "\ttext-align: center;",
+            "\tpadding: 10px 0 20px;",
+            "\tcolor: #9ea7b4;",
+            "}",
+            "</style>",
+            "<template>",
+            "\t<div class=\"layout\">",
+            "\t\t<Menu mode=\"horizontal\" theme=\"dark\" active-name=\"1\">",
+            "\t\t\t<div class=\"layout-logo\"></div>",
+            "\t\t\t<div class=\"layout-nav\">",
+            "\t\t\t\t<MenuItem name=\"1\">",
+            "\t\t\t\t\t<Icon type=\"ios-navigate\"></Icon>",
+            "\t\t\t\t\tItem 1",
+            "\t\t\t\t</MenuItem>",
+            "\t\t\t\t<MenuItem name=\"2\">",
+            "\t\t\t\t\t<Icon type=\"ios-keypad\"></Icon>",
+            "\t\t\t\t\tItem 2",
+            "\t\t\t\t</MenuItem>",
+            "\t\t\t\t<MenuItem name=\"3\">",
+            "\t\t\t\t\t<Icon type=\"ios-analytics\"></Icon>",
+            "\t\t\t\t\tItem 3",
+            "\t\t\t\t</MenuItem>",
+            "\t\t\t\t<MenuItem name=\"4\">",
+            "\t\t\t\t\t<Icon type=\"ios-paper\"></Icon>",
+            "\t\t\t\t\tItem 4",
+            "\t\t\t\t</MenuItem>",
+            "\t\t\t</div>",
+            "\t\t</Menu>",
+            "\t\t<Menu mode=\"horizontal\" active-name=\"1\">",
+            "\t\t\t<div class=\"layout-assistant\">",
+            "\t\t\t\t<MenuItem name=\"1\">Option 1</MenuItem>",
+            "\t\t\t\t<MenuItem name=\"2\">Option 2</MenuItem>",
+            "\t\t\t\t<MenuItem name=\"3\">Option 3</MenuItem>",
+            "\t\t\t</div>",
+            "\t\t</Menu>",
+            "\t\t<div class=\"layout-breadcrumb\">",
+            "\t\t\t<Breadcrumb>",
+            "\t\t\t\t<BreadcrumbItem href=\"#\">Home</BreadcrumbItem>",
+            "\t\t\t\t<BreadcrumbItem href=\"#\">Projects</BreadcrumbItem>",
+            "\t\t\t\t<BreadcrumbItem>iView</BreadcrumbItem>",
+            "\t\t\t</Breadcrumb>",
+            "\t\t</div>",
+            "\t\t<div class=\"layout-content\">",
+            "\t\t\t<div class=\"layout-content-main\">Content</div>",
+            "\t\t</div>",
+            "\t\t<div class=\"layout-copy\">",
+            "\t\t\t2011-2016 &copy; TalkingData",
+            "\t\t</div>",
+            "\t</div>",
+            "</template>",
+            "<script>",
+            "\texport default {",
+            "\t\t",
+            "\t}",
+            "</script>"
+        ]
+    }
+
+
+}
